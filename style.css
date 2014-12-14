@@ -544,8 +544,16 @@ a:active {
 	color: black
 }
 
+.navbar-default .navbar-nav>li>a:hover {
+	color: #A32323;
+}
+
 .navbar-default .navbar-brand{
 	color: black
+}
+
+.navbar-default .navbar-brand{
+	color: #A32323
 }
 .fa-nav{
 	padding: 15px;
