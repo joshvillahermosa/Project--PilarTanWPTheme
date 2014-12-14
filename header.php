@@ -14,12 +14,16 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_head(); ?>
-
-<!-- Bootstrap files -->
+<!-- Bootstrap, FontAwesome, and JQquery files -->
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<!--/ Bootstrap files-->
+<!--/ Bootstrap, FontAwesome, and JQquery files-->
+
+<?php wp_head(); ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -32,11 +36,11 @@
 			<h2 class="site-description"><?php /*Uncommented for blogger/ info bloginfo( 'description' ); */?></h2>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation navbar navbar-inverse" role="navigation">
+		<nav id="site-navigation" class="main-navigation navbar navbar-default" role="navigation">
 			<div class="container-fluid">
 				<!--<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php //_e( 'Primary Menu', 'pilartan' ); ?></button>-->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pt-navcollapse">
 				        <span class="sr-only">Toggle navigation</span>
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
@@ -44,7 +48,7 @@
 				    </button>
       				<a class="navbar-brand pt-authorname" href="http://pilartanmd.joshvee.com"><?php bloginfo( 'name' ) ?></a>					
 				</div>
-				<!--<div class="collapse navbar-collapse" id="pt-navcollapse">-->
+				<div class="collapse navbar-collapse" id="pt-navcollapse">
 					<?php
 						/**
 						 * Default for the WP menu
@@ -52,9 +56,9 @@
 						$defaults = array(
 							'theme_location'  => '',
 							'menu'            => '',
-							'container'       => 'div',
-							'container_class' => 'collapse navbar-collapse',
-							'container_id'    => 'pt-navcollapse',
+							'container'       => '',
+							'container_class' => '',
+							'container_id'    => '',
 							'menu_class'      => 'nav navbar-nav',
 							'menu_id'         => 'test',
 							'echo'            => true,
@@ -69,8 +73,13 @@
 						);						
 
 						wp_nav_menu( $defaults ); 
-					?>	
-				<!--</div>-->
+					?>
+					<ul class="nav navbar-nav navbar-right" id="pt-socialnav">
+					<li><a href="#"><i class="fa fa-facebook-square fa-lg fa-nav"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter-square fa-lg fa-nav"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin-square fa-lg fa-nav"></i></a></li>
+				</ul>	
+				</div>
 			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

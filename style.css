@@ -141,13 +141,17 @@ a img {
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text);
+
+p,
 body,
 button,
 input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Crimson Text', serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -527,6 +531,29 @@ a:active {
 	width: 50%;
 }
 
+/**
+ *  Author custom
+ */
+
+.navbar-default{
+	background-color: #FDCE80;
+	font-weight: bold;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: black
+}
+
+.navbar-default .navbar-brand{
+	color: black
+}
+.fa-nav{
+	padding: 15px;
+}
+
+#pt-socialnav>li>a{
+	padding: 0px;
+}
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
