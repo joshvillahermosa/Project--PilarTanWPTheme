@@ -28,13 +28,50 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php //Blog name not needed//bloginfo( 'name' ); ?></a></h1>
+			<h2 class="site-description"><?php /*Uncommented for blogger/ info bloginfo( 'description' ); */?></h2>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'pilartan' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<nav id="site-navigation" class="main-navigation navbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<!--<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php //_e( 'Primary Menu', 'pilartan' ); ?></button>-->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+      				<a class="navbar-brand pt-authorname" href="http://pilartanmd.joshvee.com"><?php bloginfo( 'name' ) ?></a>					
+				</div>
+				<!--<div class="collapse navbar-collapse" id="pt-navcollapse">-->
+					<?php
+						/**
+						 * Default for the WP menu
+						 */
+						$defaults = array(
+							'theme_location'  => '',
+							'menu'            => '',
+							'container'       => 'div',
+							'container_class' => 'collapse navbar-collapse',
+							'container_id'    => 'pt-navcollapse',
+							'menu_class'      => 'nav navbar-nav',
+							'menu_id'         => 'test',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'depth'           => 0,
+							'walker'          => ''
+						);						
+
+						wp_nav_menu( $defaults ); 
+					?>	
+				<!--</div>-->
+			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
