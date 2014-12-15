@@ -13,7 +13,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="text-center">
+				<div class="text-center nav-inline">
 					<?php
 					/**
 					 * First or Top level footer
@@ -21,6 +21,24 @@
 						if (is_active_sidebar('footer-1')) {
 						    dynamic_sidebar('footer-1');
 						}
+						wp_nav_menu( array(
+							'theme_location'  => '',
+							'menu'            => '',
+							'container'       => '',
+							'container_class' => '',
+							'container_id'    => '',
+							'menu_class'      => '',
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '%3$s',
+							'depth'           => 0,
+							'walker'          => '')
+						);
 					?>
 				</div>
 			</div>
@@ -33,6 +51,7 @@
 						if (is_active_sidebar('footer-2')) {
 						    dynamic_sidebar('footer-2');
 						}
+
 					?>
 				</div>
 				<div class="col-md-6">

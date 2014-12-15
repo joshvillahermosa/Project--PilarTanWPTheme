@@ -93,6 +93,9 @@ function pilartan_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	/**
+	 * Enables footer widget
+	 */
 	register_sidebar( array(
 		'name'          => __( 'Footer 1', 'pilartan' ),
 		'id'            => 'footer-1',
@@ -120,6 +123,9 @@ function pilartan_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	/**
+	 * Add custom social media links here
+	 */
 }
 add_action( 'widgets_init', 'pilartan_widgets_init' );
 
