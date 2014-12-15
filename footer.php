@@ -11,6 +11,42 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="text-center">
+					<?php
+					/**
+					 * First or Top level footer
+					 */
+						if (is_active_sidebar('footer-1')) {
+						    dynamic_sidebar('footer-1');
+						}
+					?>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<?php
+					/**
+					 * Left footer
+					 */
+						if (is_active_sidebar('footer-2')) {
+						    dynamic_sidebar('footer-2');
+						}
+					?>
+				</div>
+				<div class="col-md-6">
+					<?php
+					/**
+					 * Right level footer
+					 */
+						if (is_active_sidebar('footer-3')) {
+						    dynamic_sidebar('footer-3');
+						}
+					?>
+				</div>
+			</div>
+		</div>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'pilartan' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'pilartan' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
