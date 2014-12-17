@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Front-Page
- * Description: Foront page
+ * Description: Front page
  */
 get_header(); ?>
 <div class="jumbotron pt-banner">
@@ -9,11 +9,26 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-md-7">
 				<!-- Where widget one will be located-->
-				<h1>Qoute</h1>
-				<p> Occupy meggings beard, Shoreditch pop-up meditation tilde normcore selvage tote bag cardigan PBR&B letterpress fanny pack. Brooklyn cray Marfa, mlkshk pickled kogi tilde trust fund dreamcatcher authentic single-origin coffee fixie. Yr YOLO viral quinoa photo booth disrupt</p>
+				<?php
+				/**
+				 *  Front Page jumbotron widget - Primarily used for quick inspirational qoutes
+				 */
+					if (is_active_sidebar('front-page-1')) {
+					    dynamic_sidebar('front-page-1');
+					}
+				?>
 			</div>
 			<div class="col-md-5">
 				<!-- Where store widget will be located-->
+				<?php
+				/**
+				 *  Front Page jumbotron widget - Primarily used to feature products
+				 */
+					echo is_active_sidebar('front-page-2')." - Sidebar 2"; 
+					if (is_active_sidebar('front-page-2')) {
+					    dynamic_sidebar('front-page-2');
+					}
+				?>
 			</div>
 		</div>
 	</div>
