@@ -589,8 +589,7 @@ a:active {
 	border: 1px;
 	border-radius: 10px;
 	background-color: #FDCE80;
-	opacity: 0.85;
-    filter: alpha(opacity=40);
+	opacity: 0.8;5
 }
 /*--------------------------------------------------------------
 6.0 Accessibility

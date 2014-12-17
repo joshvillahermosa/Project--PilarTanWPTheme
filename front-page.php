@@ -43,4 +43,18 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
+<!-- Author information -->
+<div class="container-fluid">
+	<div id="pt-author">
+		<div class="row">
+			<div id="pt-author-pic" class="col-md-4">
+				
+			</div>
+			<div id="pt-author-info" class="col-md-8">
+				<h1>Who is <?php get_the_author(); ?></h1>
+				<p><?php //get_the_author_meta( $field, $userID ); ?> Lorem Ipsum</p>
+			</div>
+		</div>
+	</div>
+</div>
 <?php get_footer();?>
