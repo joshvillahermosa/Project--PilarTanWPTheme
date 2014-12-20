@@ -57,4 +57,35 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
+<!-- New letter sign up  -->
+<div class="container-fluid">
+	<div class="pt-newsletter-form">
+
+	</div>
+</div>
+<!-- Latest Blog post-->
+<div id="pt-latestblog-post" class="container-fluid">
+	<div class="row">
+		<!-- Blog image -->
+		<div class="col-md-4">
+			<img src=""  alt="" class="img-rounded"/>
+		</div>
+		<div class="col-md-8"
+
+		</div>
+	</div>
+</div>
+<!-- Twitter and latest comment -->
+<div id="pt-twittercomments" class="container-fluid">
+	<div class="row">
+		<!-- Twitter -->
+		<div class="col-md-6>
+
+		</div>
+		<!-- Latest comments -->
+		<div class="col-md-6">
+
+		</div>
+	</div>
+</div>
 <?php get_footer();?>
