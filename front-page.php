@@ -70,32 +70,27 @@ get_header(); ?>
 		<div class="col-md-4">
 			<img src=""  alt="" class="img-rounded"/>
 		</div>
-		<div class="col-md-8"
+		<div class="col-md-8"/>
 			<?php 
-$pt_latest_post = (wp_get_recent_posts( 
-array(
-				'nuumberposts' => 1,
-				'offset' => 10
-			))); 
-				$pt_post = 
-$pt_latest_post[0];
+				$pt_latest_post = (wp_get_recent_posts( 
+					array(
+						'numberposts' => 1,
+						'offset' => 10
+					)
+				)); 
+				$pt_post = $pt_latest_post[0];
 			?>
 			<h2><?php echo $pt_post['post_title'];?></h2>
-			<div id="pt-lates-post">
-				<?php echo 
-$pt_post["post_content"] ?>
-			
-				<?php 
-echo "<hr/> Dump <br />"; print_r($pt_latest_post); ?>
-			</div>
+			<?php echo $pt_post["post_content"] ?>
 		</div>
+		<?php echo "<hr/> Dump <br />"; print_r($pt_latest_post); ?>
 	</div>
 </div>
 <!-- Twitter and latest comment -->
 <div id="pt-twittercomments" class="container-fluid">
 	<div class="row">
 		<!-- Twitter -->
-		<div class="col-md-6>
+		<div class="col-md-6">
 
 		</div>
 		<!-- Latest comments -->
