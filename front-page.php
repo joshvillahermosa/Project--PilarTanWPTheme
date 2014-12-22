@@ -3,7 +3,8 @@
  * Template Name: Front-Page
  * Description: Front page
  */
-$ptbackgroundImg = wp_get_attachment_image_src(103); //Need to implement
+$ptbackgroundImg = wp_get_attachment_image_src(103); //Need to implement dyanmically
+$authorID = 2;
 get_header(); ?>
 <style type="text/css">
 	/**
@@ -51,8 +52,21 @@ get_header(); ?>
 				
 			</div>
 			<div id="pt-author-info" class="col-md-8">
-				<h1>Who is <?php get_the_author(); ?></h1>
-				<p><?php //get_the_author_meta( $field, $userID ); ?> Lorem Ipsum</p>
+				<h1>Who is <?php 
+					$pt_firstname = get_the_author_meta('first_name', $authorID); 
+					$pt_lastname = get_the_author_meta('last_name', $authorID);
+					echo $pt_firstname." ".$pt_lastname;
+					?>
+				</h1>
+				<?php 
+					$pt_description = get_the_author_meta( 'description', $authorID ); 
+
+					/** Cutes text down*/ 
+					//echo $pt_description;
+					echo strlen($pt_description);
+					$cropText = substr($pt_description, 0, 2000);
+					echo $cropText."... <a href='#'>Read more</a><hr />";
+				?>
 			</div>
 		</div>
 	</div>
@@ -80,7 +94,7 @@ get_header(); ?>
 				)); 
 				$pt_post = $pt_latest_post[0];
 			?>
-			<h2><?php echo $pt_post['post_title'];?></h2>
+			<h1><?php echo $pt_post['post_title'];?></h1>
 			<?php echo $pt_post["post_content"] ?>
 		</div>
 		<?php echo "<hr/> Dump <br />"; print_r($pt_latest_post); ?>

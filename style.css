@@ -528,6 +528,14 @@ a:active {
  *  Author custom
  ------------------------------------------------------------*/
 
+/*Font Global*/
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
  /*nav*/
 
 .navbar-default{
