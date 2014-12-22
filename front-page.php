@@ -49,7 +49,11 @@ get_header(); ?>
 	<div id="pt-author">
 		<div class="row">
 			<div id="pt-author-pic" class="col-md-4">
-				
+				<?php
+					if (is_active_sidebar('front-page-4')) {
+						dynamic_sidebar('front-page-4');
+					}
+				?>
 			</div>
 			<div id="pt-author-info" class="col-md-8">
 				<h1>Who is <?php 
@@ -66,7 +70,7 @@ get_header(); ?>
 					if(strlen($pt_description) > $cropSize)
 					{
 						$cropText = substr($pt_description, 0, 2000);
-						echo $cropText."... <a href='#'>Read more</a><hr />";
+						echo $cropText."... <a href='#'>Read more</a>";
 					} else
 					{
 						echo $pt_description;
@@ -78,7 +82,7 @@ get_header(); ?>
 </div>
 <!-- New letter sign up  -->
 <div class="container-fluid">
-	<div class="pt-newsletter-form">
+	<div id="pt-newsletter-form">
 		<?php
 			if (is_active_sidebar('front-page-3')) {
 				dynamic_sidebar('front-page-3');
@@ -114,11 +118,19 @@ get_header(); ?>
 	<div class="row">
 		<!-- Twitter -->
 		<div class="col-md-6">
-
+			<?php
+				if (is_active_sidebar('front-page-5')) {
+					dynamic_sidebar('front-page-5');
+				}
+			?>
 		</div>
 		<!-- Latest comments -->
 		<div class="col-md-6">
-
+			<?php
+				if (is_active_sidebar('front-page-6')) {
+					dynamic_sidebar('front-page-6');
+				}
+			?>
 		</div>
 	</div>
 </div>
