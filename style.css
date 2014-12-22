@@ -589,8 +589,16 @@ h1 {
 .pt-spirtual{
 	border: 1px;
 	border-radius: 10px;
+	/*background-color: #FDCE80;*/
+	background-color: #FFFEA3;
+	opacity: 0.8;
+}
+
+.pt-newsletter-form{
+	border: 1px;
+	border-radius: 10px;
 	background-color: #FDCE80;
-	opacity: 0.8;5
+	padding: 10px;
 }
 /*--------------------------------------------------------------
 6.0 Accessibility

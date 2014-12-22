@@ -61,11 +61,16 @@ get_header(); ?>
 				<?php 
 					$pt_description = get_the_author_meta( 'description', $authorID ); 
 
-					/** Cutes text down*/ 
-					//echo $pt_description;
-					echo strlen($pt_description);
-					$cropText = substr($pt_description, 0, 2000);
-					echo $cropText."... <a href='#'>Read more</a><hr />";
+					/** Cutes text down*/
+					$cropSize = 2000;
+					if(strlen($pt_description) > $cropSize)
+					{
+						$cropText = substr($pt_description, 0, 2000);
+						echo $cropText."... <a href='#'>Read more</a><hr />";
+					} else
+					{
+						echo $pt_description;
+					}
 				?>
 			</div>
 		</div>
@@ -74,7 +79,11 @@ get_header(); ?>
 <!-- New letter sign up  -->
 <div class="container-fluid">
 	<div class="pt-newsletter-form">
-
+		<?php
+			if (is_active_sidebar('front-page-3')) {
+				dynamic_sidebar('front-page-3');
+			}
+		?>
 	</div>
 </div>
 <!-- Latest Blog post-->
