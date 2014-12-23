@@ -92,26 +92,31 @@ get_header(); ?>
 </div>
 <!-- Latest Blog post-->
 <div id="pt-latestblog-post" class="container-fluid">
+	<?php 
+		$pt_latest_post = (wp_get_recent_posts( 
+			array(
+				'numberposts' => 1,
+				'offset' => 10
+			)
+		)); 
+		$pt_post = $pt_latest_post[0];
+	?>
 	<div class="row">
-		<!-- Blog image -->
+		<div class="col-md-6">
+			<h1>Latest Blog</h1>
+			<h2><?php echo $pt_post['post_title'];?></h2>
+		</div>
+		<div class="col-md-6">
+			<h4 class="date"><?php echo $pt_post['post_date'] ?></h4>
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-md-4">
+		<!-- Blog image -->
 			<img src=""  alt="" class="img-rounded"/>
 		</div>
 		<div class="col-md-8"/>
-			<?php 
-				$pt_latest_post = (wp_get_recent_posts( 
-					array(
-						'numberposts' => 1,
-						'offset' => 10
-					)
-				)); 
-				$pt_post = $pt_latest_post[0];
-			?>
-			<h1><?php echo $pt_post['post_title'];?></h1>
 			<?php echo $pt_post["post_content"] ?>
-			<div class="row">
-				<div class="col-md-3 col-md-offset-9 date"><?php echo $pt_post['post_date'] ?></div>
-			</div>
 		</div>
 	</div>
 </div>
@@ -130,10 +135,30 @@ get_header(); ?>
 			<!-- Latest comments -->
 			<div class="col-md-6">
 				<?php
+					/**
+					* Gets latest comment with out a widget
+					*/
 					if (is_active_sidebar('front-page-6')) {
 						dynamic_sidebar('front-page-6');
 					}
+
+					$defaults = array(
+						'number' => '1',
+						'order' => 'DESC',						
+					);
+					$latestComment =  get_comments( $defaults );					
 				?>
+				<h1>Recent Comment</h1>
+				<div class="pt-latestcomments">
+					<blockquote class="blockquote-reverse">
+					<?php
+					/**Gets post from comment ID*/
+						$post = get_post($latestComment[0]->comment_post_ID, "OBJECT");
+					?>
+					 	<p class="comment"><?php echo $latestComment[0]->comment_content;?></p>
+					 	<footer><cite title="Source Title"><?php echo $latestComment[0]->comment_author;?></cite> on <a href="<?php echo $post->post_name?>"><?php echo $post->post_title?></a></footer>
+					</blockquote>
+				</div>
 			</div>
 		</div>
 	</div>

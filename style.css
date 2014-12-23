@@ -535,6 +535,18 @@ h1 {
 	font-style: italic;
 }
 
+h2 {
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+}
+
 a{
 	color: #A32323;
 }
@@ -551,6 +563,7 @@ a:hover{
 
 .date {
 	font-style: italic;
+	text-align: right;
 }
 
 
@@ -636,6 +649,20 @@ a:hover{
 .pt-newsletter-form > form >input {
 	display: inline;
 }
+
+.pt-latestcomments{
+	background-color: white;
+	border: 1px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.comment {
+	font-style: italic;
+	color: #A32323;
+	text-align: justify;
+}
+
 
 
 /*--------------------------------------------------------------
