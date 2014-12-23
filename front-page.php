@@ -82,7 +82,7 @@ get_header(); ?>
 </div>
 <!-- New letter sign up  -->
 <div class="container-fluid">
-	<div id="pt-newsletter-form">
+	<div class="pt-newsletter-form">
 		<?php
 			if (is_active_sidebar('front-page-3')) {
 				dynamic_sidebar('front-page-3');

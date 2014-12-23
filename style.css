@@ -553,6 +553,8 @@ a:hover{
 	font-style: italic;
 }
 
+
+
  /*nav*/
 
 .navbar-default{
@@ -586,6 +588,7 @@ a:hover{
 /*footer*/
 .site-footer{
 	background-color: #FDCE80;
+	border-top: black solid 1px;
 }
 
 .nav-inline{
@@ -611,7 +614,7 @@ a:hover{
 	opacity: 0.8;
 }
 
-form{
+.pt-newsletter-form{
 	border: 1px;
 	border-radius: 10px;
 	background-color: #FDCE80;
@@ -630,7 +633,7 @@ form{
 	margin-bottom: 20px;
 }
 
-.pt-newsletter-form > form {
+.pt-newsletter-form > form >input {
 	display: inline;
 }
 
