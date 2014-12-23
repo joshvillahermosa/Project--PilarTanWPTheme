@@ -528,13 +528,30 @@ a:active {
  *  Author custom
  ------------------------------------------------------------*/
 
-/*Font Global*/
+/*Global*/
 h1 {
 	font-size: 40px;
 	font-weight: bold;
 	font-style: italic;
 }
 
+a{
+	color: #A32323;
+}
+
+a:visited{
+	color: #A32323;
+}
+
+
+a:hover{
+	color: #D40006;
+	text-decoration: underline;
+}
+
+.date {
+	font-style: italic;
+}
 
  /*nav*/
 
@@ -610,6 +627,11 @@ form{
 	border-radius: 10px;
 	background-color: #FDCE80;
 	padding: 5px;
+	margin-bottom: 20px;
+}
+
+.pt-newsletter-form > form {
+	display: inline;
 }
 
 

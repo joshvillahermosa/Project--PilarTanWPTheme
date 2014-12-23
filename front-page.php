@@ -109,28 +109,32 @@ get_header(); ?>
 			?>
 			<h1><?php echo $pt_post['post_title'];?></h1>
 			<?php echo $pt_post["post_content"] ?>
+			<div class="row">
+				<div class="col-md-3 col-md-offset-9 date"><?php echo $pt_post['post_date'] ?></div>
+			</div>
 		</div>
-		<?php echo "<hr/> Dump <br />"; print_r($pt_latest_post); ?>
 	</div>
 </div>
 <!-- Twitter and latest comment -->
-<div id="pt-twittercomments" class="container-fluid">
-	<div class="row">
-		<!-- Twitter -->
-		<div class="col-md-6">
-			<?php
-				if (is_active_sidebar('front-page-5')) {
-					dynamic_sidebar('front-page-5');
-				}
-			?>
-		</div>
-		<!-- Latest comments -->
-		<div class="col-md-6">
-			<?php
-				if (is_active_sidebar('front-page-6')) {
-					dynamic_sidebar('front-page-6');
-				}
-			?>
+<div class="container-fluid">
+	<div id="pt-twittercomments">
+		<div class="row">
+			<!-- Twitter -->
+			<div class="col-md-6">
+				<?php
+					if (is_active_sidebar('front-page-5')) {
+						dynamic_sidebar('front-page-5');
+					}
+				?>
+			</div>
+			<!-- Latest comments -->
+			<div class="col-md-6">
+				<?php
+					if (is_active_sidebar('front-page-6')) {
+						dynamic_sidebar('front-page-6');
+					}
+				?>
+			</div>
 		</div>
 	</div>
 </div>
