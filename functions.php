@@ -84,6 +84,21 @@ add_action( 'after_setup_theme', 'pilartan_setup' );
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function pilartan_widgets_init() {
+
+	/**
+	* Nav widget
+	*/
+
+	register_sidebar( array(
+		'name'          => __( 'Nav - Left corner', 'pilartan' ),
+		'id'            => 'nav-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'pilartan' ),
 		'id'            => 'sidebar-1',

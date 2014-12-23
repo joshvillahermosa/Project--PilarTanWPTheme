@@ -566,9 +566,17 @@ a:hover{
 	text-align: right;
 }
 
+.widget>div>a{
+	display: inline-block;
+}
 
 
  /*nav*/
+
+ .navbar{
+ 	margin: 0px;
+ 	border: 0px;
+ }
 
 .navbar-default{
 	background-color: #FDCE80;
@@ -638,6 +646,10 @@ a:hover{
 	text-align: center;
 }
 
+#pt-author{
+	padding: 10px;
+}
+
 #pt-twittercomments{
 	border: 1px;
 	border-radius: 10px;
@@ -654,6 +666,10 @@ a:hover{
 	background-color: white;
 	border: 1px;
 	border-radius: 10px;
+	padding: 10px;
+}
+
+#pt-latestblog-post{
 	padding: 10px;
 }
 

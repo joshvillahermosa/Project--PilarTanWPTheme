@@ -75,9 +75,13 @@
 						wp_nav_menu( $defaults ); 
 					?>
 					<ul class="nav navbar-nav navbar-right" id="pt-socialnav">
-					<li><a href="#"><i class="fa fa-facebook-square fa-lg fa-nav"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter-square fa-lg fa-nav"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin-square fa-lg fa-nav"></i></a></li>
+					<li>
+						<?php
+							if (is_active_sidebar('nav-1')) {
+						    	dynamic_sidebar('nav-1');
+							}
+						?>
+					</li>
 				</ul>	
 				</div>
 			</div>
