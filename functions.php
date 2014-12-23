@@ -97,7 +97,7 @@ function pilartan_widgets_init() {
 	 * Enables footer widget
 	 */
 	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'pilartan' ),
+		'name'          => __( 'Footer - Copyright and Social Media', 'pilartan' ),
 		'id'            => 'footer-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -106,7 +106,7 @@ function pilartan_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'pilartan' ),
+		'name'          => __( 'Footer - Policies', 'pilartan' ),
 		'id'            => 'footer-2',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -115,7 +115,7 @@ function pilartan_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer 3', 'pilartan' ),
+		'name'          => __( 'Footer - Partners', 'pilartan' ),
 		'id'            => 'footer-3',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
