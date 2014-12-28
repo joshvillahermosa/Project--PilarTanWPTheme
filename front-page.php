@@ -40,6 +40,21 @@ get_header(); ?>
 					    dynamic_sidebar('front-page-2');
 					}
 				?>
+				<div class="row" >
+					<div class="col-md-6" id="pt-product-img">
+						<?php if (is_active_sidebar('front-page-7')) {dynamic_sidebar('front-page-7');?>
+					</div>
+					<div class="col-md-6" id="pt-product-details">
+						<div class="row" >
+							<div class="col-md-12" id="pt-product-headlineqoute">
+								<?php if (is_active_sidebar('front-page-8')) {dynamic_sidebar('front-page-8');?>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12" id="pt-product-link"><?php if (is_active_sidebar('front-page-9')) {dynamic_sidebar('front-page-9');?></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -81,8 +96,8 @@ get_header(); ?>
 	</div>
 </div>
 <!-- New letter sign up  -->
-<div class="container">
-	<div class="pt-newsletter-form">
+<div class="pt-newsletter-form" id="signup">
+	<div class="container">
 		<?php
 			if (is_active_sidebar('front-page-3')) {
 				dynamic_sidebar('front-page-3');
@@ -144,8 +159,8 @@ get_header(); ?>
 	</div>
 </div>
 <!-- Twitter and latest comment -->
-<div class="container">
-	<div id="pt-twittercomments">
+<div id="pt-twittercomments">
+	<div class="container">
 		<div class="row">
 			<!-- Twitter -->
 			<div class="col-md-6">
