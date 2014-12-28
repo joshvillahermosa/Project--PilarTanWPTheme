@@ -17,7 +17,7 @@ get_header(); ?>
 	}
 </style>
 <div class="jumbotron pt-banner">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-7 pt-spirtual">
 				<!-- Where widget one will be located-->
@@ -45,7 +45,7 @@ get_header(); ?>
 	</div>
 </div>
 <!-- Author information -->
-<div class="container-fluid">
+<div class="container">
 	<div id="pt-author">
 		<div class="row">
 			<div id="pt-author-pic" class="col-md-4">
@@ -81,7 +81,7 @@ get_header(); ?>
 	</div>
 </div>
 <!-- New letter sign up  -->
-<div class="container-fluid">
+<div class="container">
 	<div class="pt-newsletter-form">
 		<?php
 			if (is_active_sidebar('front-page-3')) {
@@ -91,7 +91,7 @@ get_header(); ?>
 	</div>
 </div>
 <!-- Latest Blog post-->
-<div id="pt-latestblog-post" class="container-fluid">
+<div id="pt-latestblog-post" class="container">
 	<?php 
 		$pt_latest_post = (wp_get_recent_posts( 
 			array(
@@ -144,7 +144,7 @@ get_header(); ?>
 	</div>
 </div>
 <!-- Twitter and latest comment -->
-<div class="container-fluid">
+<div class="container">
 	<div id="pt-twittercomments">
 		<div class="row">
 			<!-- Twitter -->

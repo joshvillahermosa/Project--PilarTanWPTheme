@@ -11,7 +11,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="text-center nav-inline">
 					<?php

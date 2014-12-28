@@ -37,7 +37,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation navbar navbar-default" role="navigation">
-			<div class="container-fluid">
+			<div class="container">
 				<!--<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php //_e( 'Primary Menu', 'pilartan' ); ?></button>-->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pt-navcollapse">

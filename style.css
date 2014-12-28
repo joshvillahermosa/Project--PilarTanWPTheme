@@ -634,6 +634,10 @@ a:hover{
 	background-color: #FFFEA3;
 	opacity: 0.8;
 }
+.pt-spirtual p{
+	font-size: 15px;
+}
+
 
 .pt-newsletter-form{
 	border: 1px;
