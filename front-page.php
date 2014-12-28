@@ -96,10 +96,14 @@ get_header(); ?>
 		$pt_latest_post = (wp_get_recent_posts( 
 			array(
 				'numberposts' => 1,
-				'offset' => 10
+				'offset' => 10,
+				'orderby' => 'post_date',
+    			'order' => 'ASC'
 			)
 		)); 
 		$pt_post = $pt_latest_post[0];
+		/**Uncomment for debugging purposes*/
+		//print_r($pt_post);
 	?>
 	<div class="row">
 		<div class="col-md-6">
@@ -113,10 +117,29 @@ get_header(); ?>
 	<div class="row">
 		<div class="col-md-4">
 		<!-- Blog image -->
-			<img src=""  alt="" class="img-rounded"/>
+			<?php
+				/** Args to get latest post*/
+
+				$postID = $pt_post['ID'];
+				$imageSize = 'large';
+				$imgArg = array(
+					'class'	=> "img-rounded",
+					'alt'	=> $pt_post["title"]
+				);
+				//print_r(get_the_post_thumbnail($postID, $imageSize, $imgArg));
+				echo get_the_post_thumbnail($postID, $imageSize, $imgArg);
+			?> 
+			<!--<img src=""  alt="" class="img-rounded"/>-->
 		</div>
 		<div class="col-md-8"/>
 			<?php echo $pt_post["post_content"] ?>
+		</div>
+	</div>
+	<div class="row">
+		<div  class="col-md-12" style="text-align: right">
+			<footer>
+				<a href="<?php echo $pt_post['guid'];?>"><?php echo $pt_post['post_title']?></a>
+			</footer>
 		</div>
 	</div>
 </div>
