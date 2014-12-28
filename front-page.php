@@ -40,6 +40,12 @@ get_header(); ?>
 					    dynamic_sidebar('front-page-2');
 					}
 				?>
+
+				<?php
+					/**
+					* The following three widet spot add control for products in the widget section
+					*/
+				?>?
 				<div class="row" >
 					<div class="col-md-6" id="pt-product-img">
 						<?php if (is_active_sidebar('front-page-7')) {dynamic_sidebar('front-page-7');?>
