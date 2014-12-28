@@ -74,6 +74,9 @@ function pilartan_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Sets up to add featured image
+	add_theme_support( 'post-thumbnails' ); 
 }
 endif; // pilartan_setup
 add_action( 'after_setup_theme', 'pilartan_setup' );
