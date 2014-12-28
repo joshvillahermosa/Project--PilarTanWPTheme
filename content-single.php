@@ -15,6 +15,7 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<?php echo get_the_post_thumbnail();?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'pilartan' ),
