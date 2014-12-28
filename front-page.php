@@ -19,7 +19,7 @@ get_header(); ?>
 <div class="jumbotron pt-banner">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-7 pt-spirtual">
+			<div class="col-md-6 pt-spirtual">
 				<!-- Where widget one will be located-->
 				<?php
 				/**
@@ -30,7 +30,7 @@ get_header(); ?>
 					}
 				?>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-6">
 				<!-- Where store widget will be located-->
 				<?php
 				/**
@@ -45,19 +45,19 @@ get_header(); ?>
 					/**
 					* The following three widet spot add control for products in the widget section
 					*/
-				?>?
+				?>
 				<div class="row" >
 					<div class="col-md-6" id="pt-product-img">
-						<?php if (is_active_sidebar('front-page-7')) {dynamic_sidebar('front-page-7');?>
+						<?php if (is_active_sidebar('front-page-7')) {dynamic_sidebar('front-page-7');}?>
 					</div>
 					<div class="col-md-6" id="pt-product-details">
 						<div class="row" >
 							<div class="col-md-12" id="pt-product-headlineqoute">
-								<?php if (is_active_sidebar('front-page-8')) {dynamic_sidebar('front-page-8');?>
+								<?php if (is_active_sidebar('front-page-8')) {dynamic_sidebar('front-page-8');}?>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-12" id="pt-product-link"><?php if (is_active_sidebar('front-page-9')) {dynamic_sidebar('front-page-9');?></div>
+							<div class="col-md-12" id="pt-product-link"><?php if (is_active_sidebar('front-page-9')) {dynamic_sidebar('front-page-9');}?></div>
 						</div>
 					</div>
 				</div>
