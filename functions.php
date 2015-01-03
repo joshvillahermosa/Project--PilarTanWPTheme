@@ -240,7 +240,7 @@ function pilartan_widgets_init() {
 	* Sign up confirmation widget
 	*/
 	register_sidebar( array(
-		'name'          => __( 'Confirmation Page  Widget', 'pilartan' ),
+		'name'          => __( 'Confirmation Page Widget', 'pilartan' ),
 		'id'            => 'confirm-page-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -253,8 +253,21 @@ function pilartan_widgets_init() {
 	* Author picture widget
 	*/
 	register_sidebar( array(
-		'name'          => __( 'Author Page  Widget', 'pilartan' ),
+		'name'          => __( 'Author Page Widget', 'pilartan' ),
 		'id'            => 'author-page-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+	/**
+	* Testamonials widget
+	*/
+	register_sidebar( array(
+		'name'          => __( 'Testimonials Page Widget', 'pilartan' ),
+		'id'            => 'testimonials-page-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
