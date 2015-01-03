@@ -230,4 +230,19 @@ get_header(); ?>
     </div>
   </div>
 </div>
+
+<!-- JS Script to fix images-->
+<script type="text/javascript">
+	/**
+		Dirty hack
+		Source: http://stackoverflow.com/questions/10596417/is-there-a-way-to-get-element-by-xpath-in-javascript
+	*/
+	function getElementByXpath (path) {
+  		return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+	}
+
+	var image = getElementByXpath('//*[@id="image-6"]/div/img');
+	image.className = 'img-rounded img-responsive';
+
+</script>
 <?php get_footer();?>
