@@ -18,6 +18,8 @@ get_header(); ?>
 </style>
 <div class="jumbotron pt-banner">
 	<div class="container">
+
+		<!-- Add mobile visible to purchase books -->
 		<div class="row">
 			<div class="col-md-6 pt-spirtual">
 				<!-- Where widget one will be located-->
@@ -54,6 +56,7 @@ get_header(); ?>
 						<div class="row" >
 							<div class="col-md-12" id="pt-product-link"><?php if (is_active_sidebar('front-page-9')) {dynamic_sidebar('front-page-9');}?></div>
 						</div>
+						<br />
 						<div class="row">
 							<div class="col-md-12" id="pt-product-headlineqoute">
 								<?php if (is_active_sidebar('front-page-8')) {dynamic_sidebar('front-page-8');}?>
@@ -117,9 +120,10 @@ get_header(); ?>
 		$pt_latest_post = (wp_get_recent_posts( 
 			array(
 				'numberposts' => 1,
-				'offset' => 10,
+				'offset' => 0,
 				'orderby' => 'post_date',
-    			'order' => 'ASC'
+				'post_status' => 'publish',
+    			'order' => 'DESC'
 			)
 		)); 
 		$pt_post = $pt_latest_post[0];
@@ -144,7 +148,7 @@ get_header(); ?>
 				$postID = $pt_post['ID'];
 				$imageSize = 'large';
 				$imgArg = array(
-					'class'	=> "img-rounded",
+					'class'	=> "img-rounded img-responsive",
 					'alt'	=> $pt_post["title"]
 				);
 				//print_r(get_the_post_thumbnail($postID, $imageSize, $imgArg));
