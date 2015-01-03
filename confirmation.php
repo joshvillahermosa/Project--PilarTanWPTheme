@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Confirmation Page
- * Description: Front page
+ * Description: Confirmation page after email activation
  */
 ?>
 <?php get_header(); ?>
