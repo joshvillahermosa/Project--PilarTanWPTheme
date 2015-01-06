@@ -94,12 +94,13 @@ get_header(); ?>
 					if(strlen($pt_description) > $cropSize)
 					{
 						$cropText = substr($pt_description, 0, 2000);
-						echo $cropText."... <a href='#'>Read more</a>";
+						echo $cropText."... <a href='/author.php'>Read more</a>";
 					} else
 					{
 						echo $pt_description;
 					}
 				?>
+				<span><a href="/about">...Read more</a></span>
 			</div>
 		</div>
 	</div>
