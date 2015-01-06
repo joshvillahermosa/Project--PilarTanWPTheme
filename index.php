@@ -14,12 +14,14 @@
 get_header(); ?>
 <!-- Controls blog loop -->
 <br />
-<div class="container">
-	<div class="jumbotron">
-		<!-- Will hold widget--> 
-		<h1>Text holder</h1>
-	</div>
 
+<div class="jumbotron">
+	<!-- Will hold widget--> 
+	<div class="container">
+		<?php if (is_active_sidebar('bloglist-page-1')) {dynamic_sidebar('bloglist-page-1');}?>
+	</div>
+</div>
+<div class="container">
 	<div class="row">
 		<div class="col-md-9">
 			<!-- Controls blog loop -->
@@ -56,7 +58,7 @@ get_header(); ?>
 		</div>
 		<div class="col-md-3">
 			<!-- Side Widget -->
-			
+			<?php if (is_active_sidebar('bloglist-page-2')) {dynamic_sidebar('bloglist-page-2');}?>
 		</div>
 	</div>
 </div>
