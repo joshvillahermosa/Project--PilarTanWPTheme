@@ -13,9 +13,7 @@
 
 get_header(); ?>
 <!-- Controls blog loop -->
-<br />
-
-<div class="jumbotron">
+<div class="jumbotron pt-banner"> 
 	<!-- Will hold widget--> 
 	<div class="container">
 		<?php if (is_active_sidebar('bloglist-page-1')) {dynamic_sidebar('bloglist-page-1');}?>
