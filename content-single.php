@@ -8,18 +8,22 @@
 <br />
 <div class="container">
 	<div class="jumbotron">
-		<?php
-			/** Args to get latest post*/
+		<div class="row">
+			<div class="col-md-12">
+				<?php
+					/** Args to get latest post*/
 
-			$postID = $pt_post['ID'];
-			$imageSize = 'large';
-			$imgArg = array(
-				'class'	=> "img-rounded img-responsive",
-				'alt'	=> $pt_post["title"]
-			);
-			//print_r(get_the_post_thumbnail($postID, $imageSize, $imgArg));
-			echo get_the_post_thumbnail($postID, $imageSize, $imgArg);
-		?> 
+					$postID = $pt_post['ID'];
+					$imageSize = 'large';
+					$imgArg = array(
+						'class'	=> "img-rounded img-responsive img-feat",
+						'alt'	=> $pt_post["title"]
+					);
+					//print_r(get_the_post_thumbnail($postID, $imageSize, $imgArg));
+					echo get_the_post_thumbnail($postID, $imageSize, $imgArg);
+				?> 	
+			</div>
+		</div>
 		
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
@@ -32,7 +36,6 @@
 
 			<div class="entry-content">
 				<?php the_content(); ?>
-				<?php echo get_the_post_thumbnail();?>
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . __( 'Pages:', 'pilartan' ),

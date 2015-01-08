@@ -13,7 +13,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php pilartan_post_nav(); ?>
+			<div class="container"><?php pilartan_post_nav(); ?></div>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
