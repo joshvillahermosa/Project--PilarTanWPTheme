@@ -14,7 +14,7 @@
 <?php get_header();?>
 <div class="container">
 	<br />
-	<div class="jumbotron">
+	<div class="jumbotron white-bg">
 		<div class="row">
 			<?php if (is_active_sidebar('author-page-1')) 
 					{dynamic_sidebar('author-page-1');}?>

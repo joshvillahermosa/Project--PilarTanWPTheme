@@ -7,7 +7,7 @@
 <!-- Displays single content posts-->
 <br />
 <div class="container">
-	<div class="jumbotron">
+	<div class="jumbotron white-bg">
 		<div class="row">
 			<div class="col-md-12">
 				<?php
