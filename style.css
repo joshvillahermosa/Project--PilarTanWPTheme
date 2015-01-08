@@ -195,6 +195,10 @@ a:hover{
 	border-radius: 5px;
 }
 
+.white-bg{
+	background-color: white;
+}
+
 /*To make testamonials qoute white on background*/
 #pt-product-headlineqoute{
 	color: white !important;

@@ -38,7 +38,8 @@
 			<h2 class="site-description"><?php /*Uncommented for blogger/ info bloginfo( 'description' ); */?></h2>
 		</div> .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation navbar navbar-default" role="navigation">
+		<br>
+		<nav id="site-navigation" class="main-navigation navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<!--<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php //_e( 'Primary Menu', 'pilartan' ); ?></button>-->
 				<div class="navbar-header">
