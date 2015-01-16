@@ -49,7 +49,10 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				    </button>
-      				<a class="navbar-brand pt-authorname" href="http://pilartanmd.joshvee.com"><?php bloginfo( 'name' ) ?></a>					
+				<!-- Note to developer
+					Change the href to get a dynamic site value
+				-->
+      				<a class="navbar-brand pt-authorname" href="http://pilartanmd.com"><?php bloginfo( 'name' ) ?></a>					
 				</div>
 				<div class="collapse navbar-collapse" id="pt-navcollapse">
 					<?php
