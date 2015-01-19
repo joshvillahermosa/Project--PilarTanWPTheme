@@ -18,6 +18,18 @@ get_header(); ?>
 </style>
 <div class="jumbotron pt-banner">
 	<div class="container">
+		<div class="row">
+			<div class="well">
+				<?php
+				/**
+				 *  Front Page jumbotron widget - Primarily used for quick inspirational qoutes
+				 */
+					if (is_active_sidebar('front-page-11')) {
+					    dynamic_sidebar('front-page-11');
+					}
+				?>
+			</div>
+		</div>
 
 		<!-- Add mobile visible to purchase books -->
 		<div class="row">
