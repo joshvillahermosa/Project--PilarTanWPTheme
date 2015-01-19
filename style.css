@@ -219,7 +219,7 @@ a:hover{
 /*Front Page*/
 .pt-banner{
 	/*Will need to add a method here to dynamically add*/
-	background: url('http://pilartanmd.joshvee.com/wp-content/uploads/2014/12/ptjumbotron-compressed.jpg') no-repeat center center fixed;
+	background: url('http://pilartanmd.com/wp-content/uploads/2014/12/ptjumbotron-compressed.jpg') no-repeat center center fixed;
 	background-size: cover;
 }
 
@@ -228,6 +228,17 @@ a:hover{
 .img-feat{
 	margin-right: auto;
 	margin-left: auto;
+}
+
+/*Testimonials*/
+.bg-testamonials{
+	/*Will need to add a method here to dynamically add*/
+	/*no-repeat center center fixed*/
+	background: url('http://pilartanmd.com/wp-content/uploads/2015/01/rsz_1rsz_120150117_162819.jpg') /*no-repeat center center fixed*/;
+	background-size: cover;
+}
+.testimonials-widget-testimonials .paging {
+	font-size: 50px;
 }
 
 /*--------------------------------------------------------------
