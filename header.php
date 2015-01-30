@@ -52,7 +52,8 @@
 				<!-- Note to developer
 					Change the href to get a dynamic site value
 				-->
-      				<a class="navbar-brand pt-authorname" href="http://pilartanmd.com"><?php bloginfo( 'name' ) ?></a>					
+      				<!-- <a class="navbar-brand pt-authorname" href="http://pilartanmd.com"><?php bloginfo( 'name' ) ?></a> -->					
+					<a class="navbar-brand pt-authorname" href="http://pilartanmd.com">homepilartanmd.com</a>
 				</div>
 				<div class="collapse navbar-collapse" id="pt-navcollapse">
 					<?php
