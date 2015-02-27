@@ -29,6 +29,20 @@ get_header(); ?>
 			?>
 		</div>
 
+
+		<div class="row">
+			<div class="col-md-12">
+				<?php
+			/**
+			 *  Front Page jumbotron widget - Primarily used for quick inspirational qoutes
+			 */
+				if (is_active_sidebar('front-page-12')) {
+				    dynamic_sidebar('front-page-12');
+				}
+			?>
+			</div>
+		</div>
+
 		<!-- Add mobile visible to purchase books -->
 		<div class="row">
 			<div class="col-md-6 pt-spirtual">

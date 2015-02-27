@@ -53,7 +53,7 @@
 					Change the href to get a dynamic site value
 				-->
       				<!-- <a class="navbar-brand pt-authorname" href="http://pilartanmd.com"><?php bloginfo( 'name' ) ?></a> -->					
-					<a class="navbar-brand pt-authorname" href="http://pilartanmd.com">homepilartanmd.com</a>
+					<a class="navbar-brand pt-authorname" href="http://pilartanmd.com">Home</a>
 				</div>
 				<div class="collapse navbar-collapse" id="pt-navcollapse">
 					<?php
