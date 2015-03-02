@@ -157,7 +157,7 @@ get_header(); ?>
 	?>
 	<div class="row">
 		<div class="col-md-6">
-			<h1>Latest Blog</h1>
+			<h1>Second News Letter</h1>
 			<h2><?php echo $pt_post['post_title'];?></h2>
 		</div>
 		<div class="col-md-6">
